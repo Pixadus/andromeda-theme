@@ -1,0 +1,26 @@
+<!-- Approach adopted from https://github.com/svavs/particle-zola/blob/master/templates/macros.html. Thanks, Silvano! -->
+{% macro head() %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | striptags | trim | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ config.base_url ~ "/main.css" }}">
+</head>
+{% endmacro head %}
+
+{% macro footer() %}
+<script type="text/javascript" src="{{ config.base_url ~ "/js/galaxy.js" }}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script>
+  const observer = lozad();
+  observer.observe();
+</script>
+<footer>
+  <div class="tiny-block"></div>
+  <p>The End.</p>
+</footer>
+{% endmacro footer %}

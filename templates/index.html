@@ -1,0 +1,38 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    {{ macros::head() }}
+
+    <body>
+        <div id="index-header">
+            <canvas id="galaxy"></canvas>
+            <h1 class="andromeda-header-text">
+                <a href="{{ config.base_url }}">{{ config.title }}</a>
+            </h1>
+            {% if config.extra.blog_link != "" %}
+            <a href="{{ config.extra.blog_link }}">Blog</a>
+            {% endif %}
+        </div>
+        <div class="content">
+            {% block content %}
+            <div class="posts">
+                {% for page in section.pages %}
+                <a class="stretched" href="{{page.path}}">
+                    <div class="post-container">
+                        <img data-src="{{page.extra.header_img}}" class="lozad" data-placeholder-background="darkgrey">
+                        <div class="post-text">
+                            <h2 class="post-title">{{ page.title | safe }}</h2>
+                            <span class="post-description">{{ page.description | safe }}</span>
+                            <span class="post-date">{{ page.date | date(format="%Y/%m/%d") }}</span>    
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% endblock content %}
+        </div>
+        {{ macros::footer() }}
+    </body>
+</html>
