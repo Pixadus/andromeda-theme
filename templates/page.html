@@ -1,5 +1,33 @@
 {% import "macros.html" as macros %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% endblock content %}
+    {{ macros::head() }}
+
+    <body>
+
+        {% block content %}
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="{{ config.base_url }}">{{ config.title }}</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="{{page.extra.header_img}}" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">{{ page.title | safe }}</h1>
+                <span class="page-description">{{ page.description }}</span>
+                <span class="page-date">{{ page.date | date(format="%Y/%m/%d") }}</span>
+            </div>
+        </div>
+        <div class="body-container">
+            {{page.content | safe}}
+        </div>
+        
+        {% endblock content %}
+
+        {{ macros::pagefooter() }}
+
+    </body>
+
+</html>

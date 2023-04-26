@@ -1,4 +1,12 @@
+@import 'colors';
+
 * {
     margin: 0;
-    font-family: "Serif";
+    font-family: "PT Serif";
+}
+strong {
+    font-family: "PT Serif Bold";
+}
+h1, h2, h3, h4 {
+    font-family: "Montserrat";
 }

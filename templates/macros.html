@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | striptags | trim | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
@@ -12,7 +12,7 @@
 </head>
 {% endmacro head %}
 
-{% macro footer() %}
+{% macro indexfooter() %}
 <script type="text/javascript" src="{{ config.base_url ~ "/js/galaxy.js" }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script>
@@ -23,4 +23,20 @@
   <div class="tiny-block"></div>
   <p>The End.</p>
 </footer>
-{% endmacro footer %}
+{% endmacro indexfooter %}
+
+{% macro pagefooter() %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script>
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+  });
+  const obs = lozad();
+  obs.observe();
+</script>
+<!-- <footer>
+  <div class="tiny-block"></div>
+  <p>The End.</p>
+</footer> -->
+{% endmacro pagefooter %}
