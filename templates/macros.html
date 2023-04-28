@@ -7,6 +7,10 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | striptags | trim | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
+  
+  {% if config.extra.favicon %}
+  <link rel="icon" type="image/x-icon" href="{{ config.extra.favicon }}">
+  {% endif %}
 
   <link rel="stylesheet" href="{{ config.base_url ~ "/main.css" }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />

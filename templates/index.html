@@ -11,9 +11,11 @@
             <h1 class="andromeda-header-text">
                 <a href="{{ config.base_url }}">{{ config.title }}</a>
             </h1>
-            {% if config.extra.blog_link != "" %}
-            <a href="{{ config.extra.blog_link }}">Blog</a>
-            {% endif %}
+            <span class="header-link-container">
+                {% for link in config.extra.header_links %}
+                <a href="{{ link.url }}" class="header-link" target="_blank">{{ link.name }}</a>
+                {% endfor %}
+            </span>
         </div>
         <div class="content">
             {% block content %}

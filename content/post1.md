@@ -1,8 +1,8 @@
 +++
-title = "Day 0 - Getting equipped"
-date = 2023-04-25
-description = "Buying a bike and getting ready to go"
-extra = {header_img = "/images/bike.jpg"}
+title = "Interesting titles!"
+date = 2023-04-26
+description = "Lorem ipsum dolor sit"
+extra = {header_img = "https://live.staticflickr.com/65535/52831738797_416eeff23a_k_d.jpg"}
 +++
 
 # Introduction
@@ -38,17 +38,17 @@ We can do single images, such as
 Or two images, 
 
 <div class="gallery">
-      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
+      <a href="https://live.staticflickr.com/65535/52831738797_d5aeb218b8_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52831738797_fb3f1cfa1e_c_d.jpg">Stylo the motorbike</a>
       <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
 </div>
 
 And, finally, lots of images,
 
 <div class="gallery">
-      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
-      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
-      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_m_d.jpg">title 2</a>
-      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
-      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
+      <a href="https://live.staticflickr.com/65535/52831738797_d5aeb218b8_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52831738797_fb3f1cfa1e_c_d.jpg"></a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg"></a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_m_d.jpg"></a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg"></a>
+      <a href="https://live.staticflickr.com/65535/52831738797_d5aeb218b8_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52831738797_fb3f1cfa1e_c_d.jpg"></a>
 
 </div>
