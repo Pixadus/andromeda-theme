@@ -1,2 +1,2 @@
-# Ignore ENV file
-.env
+# Ignore unnecessary folders
+public/
