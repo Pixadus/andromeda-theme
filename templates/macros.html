@@ -9,6 +9,7 @@
   <meta name="description" content="{% if page.description %}{{ page.description | striptags | trim | truncate(length=160) }}{% else %}{{ config.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ config.base_url ~ "/main.css" }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
 </head>
 {% endmacro head %}
 
@@ -27,16 +28,133 @@
 
 {% macro pagefooter() %}
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
 <script>
+  // Add lazy loading to all elements
   const elements = document.querySelectorAll('body *');
   elements.forEach((element) => {
     element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
   });
   const obs = lozad();
   obs.observe();
+
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false
+        })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '200', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false
+      });
+    }
+  });
+
+  // $(".gallery").nanogallery2({
+
+  //   // GALLERY AND THUMBNAIL LAYOUT
+  //   galleryDisplayMode: 'fullContent',
+  //   // gallerySorting: 'random',
+  //   thumbnailHeight: '350', thumbnailWidth: 'auto',
+  //   thumbnailAlignment: 'center',
+  //   thumbnailBaseGridHeight: 100,
+  //   thumbnailL1GutterWidth: 4,
+  //   thumbnailL1GutterHeight: 4,
+  //   thumbnailBorderHorizontal: 2,
+  //   thumbnailBorderVertical: 2,
+
+  //   // THUMBNAIL TOOLS & LABEL
+  //   thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+    
+  //   // DISPLAY ANIMATION
+  //   thumbnailDisplayTransition: 'fadeIn',
+  //   thumbnailDisplayTransitionDuration: 500,
+  //   thumbnailDisplayInterval: 30,
+
+  //   // // THUMBNAIL'S HOVER ANIMATION
+  //   // thumbnailHoverEffect2: 'imageScaleIn90',
+  //   touchAnimation: true,
+  //   touchAutoOpenDelay: 800,
+    
+  //   // DEEP LINKING
+  //   locationHash: false
+  // });
 </script>
-<!-- <footer>
-  <div class="tiny-block"></div>
-  <p>The End.</p>
-</footer> -->
 {% endmacro pagefooter %}

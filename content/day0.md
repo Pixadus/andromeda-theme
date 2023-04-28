@@ -29,5 +29,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Images
 
-And, sample images, like so. 
-![Demo image](https://i3.lensdump.com/i/EtF5x2.jpeg)
+We can do single images, such as
+
+<div class="gallery">
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
+</div>
+
+Or two images, 
+
+<div class="gallery">
+      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
+</div>
+
+And, finally, lots of images,
+
+<div class="gallery">
+      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_m_d.jpg">title 2</a>
+      <a href="https://live.staticflickr.com/65535/52838617702_e430b1891f_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52838617702_1f3b10f9d3_c_d.jpg">title 2</a>
+      <a href="https://live.staticflickr.com/65535/52847330381_308a00d558_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52847330381_64a4c01828_w_d.jpg">Stylo the motorbike</a>
+
+</div>
