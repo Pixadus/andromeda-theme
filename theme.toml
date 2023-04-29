@@ -3,6 +3,7 @@ description = "Photography journal blog theme"
 license = "MIT"
 homepage = "https://github.com/Pixadus/andromeda-theme"
 min_version = "0.16.0"
+demo = "https://andromeda-theme.netlify.app/"
 
 [author]
 name = "Parker Lamb"

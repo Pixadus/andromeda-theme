@@ -70,6 +70,18 @@ p {
         margin: 0 auto !important;
         text-align: left;
     }
+    ul, ol {
+        width: 60%;
+        margin: 0 auto !important;
+        margin: 0.5em;
+    }
+    hr {
+        width: 40%;
+        margin: 0 auto !important;
+        color: gray;
+        margin-top: 1em !important;
+        margin-bottom: 1em !important;
+    }
     h1, h2, h3, h4 {
         text-transform: uppercase;
     }
