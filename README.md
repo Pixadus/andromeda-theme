@@ -39,6 +39,19 @@ extra = {header_img = "image-url"}
 
 The `header_img` field is the image shown on the homepage of the blog and in the heading of each page. It can be a remote URL or local - if local, by default this will be files stored in the `static` folder, or `/images` in the URL. 
 
+### Galleries
+
+Galleries can be set up by using the following template in your Markdown file:
+
+```html
+<div class="gallery">
+    <a href="original_photo1.jpg" data-ngthumb="thumbnail_photo1.jpg"></a>
+    <a href="original_photo2.jpg" data-ngthumb="thumbnail_photo2.jpg"></a>
+</div>
+```
+
+For more or less photos, use `<a href>` tags. [Flickr](https://www.flickr.com/) provides a good hosting option as it automatically generates thumbnails for you. 
+
 ## Configuration
 
 Andromeda supports custom navbar links - see [config.toml](https://github.com/Pixadus/andromeda-theme/blob/main/config.toml) for an example. You may also set a custom `favicon.ico` though `config.toml`. 
