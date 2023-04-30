@@ -1,5 +1,7 @@
 // Import fonts and colors
 @import 'colors';
+$desktop-width: 60%;
+$mobile-width: 80%;
 
 // Header image styling
 .header-image-container {
@@ -66,12 +68,12 @@ p {
     }
     @keyframes showLazy { from { opacity: 0; } to { opacity: 1; } }
     p, h1, h2, h3, h4 {
-        width: 60%;
+        width: $desktop-width;
         margin: 0 auto !important;
         text-align: left;
     }
     ul, ol {
-        width: 60%;
+        width: $desktop-width;
         margin: 0 auto !important;
         margin: 0.5em;
     }
@@ -96,23 +98,31 @@ p {
         padding-top: 1.5em;
         padding-bottom: 0.75em;
     }
+    a {
+        text-decoration: none;
+        color: rgb(69, 69, 255);
+    }
+    a:hover {
+        color: rgb(42, 42, 167);
+    }
     blockquote {
         font-style: italic;
         padding-left: 2em; 
-        padding-top: 0.5em;
+        padding-top: em;
         padding-bottom: 0.5em;
-        margin-top: 2em !important;
-        margin-bottom: 2em !important;
-        width: 40%;
+        margin-top: 1em !important;
+        margin-bottom: 1em !important;
+        width: $desktop-width;
         margin: 0 auto;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        p {
+            width: 100%;
+        }
     }
 }
 
 // Gallery customization
 .gallery {
-    width: 60%;
+    width: $desktop-width;
     margin: 0 auto;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
@@ -128,4 +138,20 @@ p {
 // Page footer styling
 .pageend {
     height: 3em;
+}
+
+// Mobile styling
+@media only screen and (min-width: 901px) {
+    .body-container {
+        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery {
+            width: $desktop-width;
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .body-container {
+        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery {
+            width: $mobile-width;
+        }
+    }
 }
