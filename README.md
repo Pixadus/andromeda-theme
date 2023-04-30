@@ -22,6 +22,7 @@ Assuming you already have a site set up (see the [Zola guide for setting up a si
     git clone https://github.com/Pixadus/andromeda-theme themes/andromeda
     ```
 3. Duplicate the structure of the the `config.toml` file found in `themes/andromeda/config.toml` or [this repository](https://github.com/Pixadus/andromeda-theme/blob/main/config.toml) within your own `config.toml`.
+4. Set the theme to Andromeda, by including `theme = andromeda` in your `config.toml` file.
 
 ## Creating pages
 
