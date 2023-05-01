@@ -9,3 +9,33 @@ p {
     text-align: center;
     margin: 1.5em !important;
 }
+
+// Page footer styling
+.footer-black {
+    height: 9em;
+    margin-top: 2em;
+    background-color: $andromeda-dark;
+    .text-block {
+        padding-top: 1em;
+        text-align: center;
+        color: $andromeda-light;
+        p {
+            display: block;
+            text-align: center;
+            margin: 0 !important;
+            padding: 0.5em;
+        }
+        a {
+            text-decoration: none;
+            color: $andromeda-link;
+        }
+        a:hover {
+            color: $andromeda-link-dark;
+        }
+        .license {
+            display: block;
+            padding-top: 0.5em;
+            margin: 0 !important;
+        }
+    }
+}

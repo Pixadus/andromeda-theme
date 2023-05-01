@@ -25,8 +25,19 @@
   observer.observe();
 </script>
 <footer>
-  <div class="tiny-block"></div>
-  <p>The End.</p>
+  <div class="footer-black">
+    <div class="text-block">
+      {% if config.extra.name %}
+      <p>By {{ config.extra.name }}</p>
+      {% endif %}
+      {% if config.extra.email %}
+      <p>Drop me a letter at <a href="mailto:{{ config.extra.email }}">{{config.extra.email}}</a></p>
+      {% endif %}
+      {% if config.extra.license %}
+      <p class="license">This site is licensed {{ config.extra.license }}</p>
+      {% endif %}
+    </div>
+  </div>
 </footer>
 {% endmacro indexfooter %}
 
@@ -132,5 +143,17 @@
     }
   });
 </script>
-<div class="pageend"></div>
+<div class="footer-black">
+  <div class="text-block">
+    {% if config.extra.name %}
+    <p>By Parker Lamb</p>
+    {% endif %}
+    {% if config.extra.email %}
+    <p>Drop me a letter at <a href="mailto:{{ config.extra.email }}">{{config.extra.email}}</a></p>
+    {% endif %}
+    {% if config.extra.license %}
+    <p class="license">This site is licensed {{ config.extra.license }}</p>
+    {% endif %}
+  </div>
+</div>
 {% endmacro pagefooter %}
