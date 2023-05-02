@@ -79,7 +79,13 @@
         touchAutoOpenDelay: 800,
 
         // DEEP LINKING
-        locationHash: false
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
         })
     } else if (items == 2) {
         $(this).nanogallery2({
@@ -109,7 +115,13 @@
           touchAutoOpenDelay: 800,
           
           // DEEP LINKING
-          locationHash: false
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
       });
     } else {
       $(this).nanogallery2({
@@ -138,7 +150,13 @@
         touchAutoOpenDelay: 800,
 
         // DEEP LINKING
-        locationHash: false
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
       });
     }
   });

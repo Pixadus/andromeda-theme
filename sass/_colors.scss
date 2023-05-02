@@ -27,6 +27,11 @@ $andromeda-link-dark: #53aeef;
     font-style: normal;
 }
 @font-face {
+    font-family: "PT Serif Italic";
+    src: url("../fonts/ptserif-italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
     font-family: "Montserrat";
     src: url("../fonts/montserrat.ttf") format("truetype");
     font-style: normal;
