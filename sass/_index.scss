@@ -1,5 +1,11 @@
 @import 'colors';
 
+// HTML fix for large screens
+
+html {
+    min-height: 100%;
+}
+
 // Eventually, let's make this a canvas element with some fancy text. For now, contrasty.
 #index-header {
     background-color: transparent;
