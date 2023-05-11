@@ -2,8 +2,8 @@
 
 // HTML fix for large screens
 
-html {
-    min-height: 100%;
+html, body {
+    min-height: 100vh;
 }
 
 // Eventually, let's make this a canvas element with some fancy text. For now, contrasty.
