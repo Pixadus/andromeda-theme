@@ -76,6 +76,14 @@ p {
         width: $desktop-width;
         margin: 0 auto !important;
         margin: 0.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.25em;
+        ul {
+            width: 100%;
+        }
+    }
+    li {
+        padding-bottom: 0.25em;
     }
     iframe {
         display: block;
