@@ -153,6 +153,10 @@ p {
     filter: brightness(100%);
 }
 
+iframe {
+    max-width: 60% !important;
+}
+
 // Mobile styling
 @media only screen and (min-width: 901px) {
     .body-container {
@@ -160,12 +164,18 @@ p {
             width: $desktop-width;
         }
     }
+    iframe {
+        max-width: $desktop-width !important;
+    }
 }
 @media only screen and (max-width: 900px) {
     .body-container {
         p, h1, h2, h3, h4, ul, ol, blockquote, .gallery {
             width: $mobile-width;
         }
+    }
+    iframe {
+        max-width: $mobile-width !important;
     }
     .page-title {
         font-size: 2.5em;
