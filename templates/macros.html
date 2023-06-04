@@ -177,7 +177,7 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
 <div class="footer-black">
   <div class="text-block">
     {% if config.extra.name %}
-    <p>By Parker Lamb</p>
+    <p>By {{ config.extra.name }}</p>
     {% endif %}
     {% if config.extra.email %}
     <p>Drop me a letter at <a href="mailto:{{ config.extra.email }}">{{config.extra.email}}</a></p>
