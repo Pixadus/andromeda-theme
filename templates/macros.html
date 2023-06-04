@@ -55,6 +55,14 @@
   const obs = lozad();
   obs.observe();
 
+  // Center normal images
+  $("p").each( function(index, element) {
+    const items = $(this)[0].children;
+    if (items.length > 0 && items[0].tagName == 'IMG') {
+      $(this).css("text-align", "center");
+    }
+  } )
+
   // Gallery setup
   $(".gallery").each( function( index, element ) {
     const items = $(this)[0].children.length;
