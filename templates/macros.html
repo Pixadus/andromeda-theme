@@ -42,6 +42,19 @@
 {% endmacro indexfooter %}
 
 {% macro pagefooter() %}
+<div class="footer-black">
+  <div class="text-block">
+    {% if config.extra.name %}
+    <p>By {{ config.extra.name }}</p>
+    {% endif %}
+    {% if config.extra.email %}
+    <p>Drop me a letter at <a href="mailto:{{ config.extra.email }}">{{config.extra.email}}</a></p>
+    {% endif %}
+    {% if config.extra.license %}
+    <p class="license">This site is licensed {{ config.extra.license }}</p>
+    {% endif %}
+  </div>
+</div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
@@ -174,17 +187,4 @@
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'] ]}});
 </script>
-<div class="footer-black">
-  <div class="text-block">
-    {% if config.extra.name %}
-    <p>By {{ config.extra.name }}</p>
-    {% endif %}
-    {% if config.extra.email %}
-    <p>Drop me a letter at <a href="mailto:{{ config.extra.email }}">{{config.extra.email}}</a></p>
-    {% endif %}
-    {% if config.extra.license %}
-    <p class="license">This site is licensed {{ config.extra.license }}</p>
-    {% endif %}
-  </div>
-</div>
 {% endmacro pagefooter %}
