@@ -136,6 +136,11 @@ p {
             width: 100%;
         }
     }
+    pre {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin: 0 auto;
+    }
 }
 
 // Gallery customization
@@ -160,7 +165,7 @@ iframe {
 // Mobile styling
 @media only screen and (min-width: 901px) {
     .body-container {
-        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery {
+        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery, pre {
             width: $desktop-width;
         }
     }
@@ -170,7 +175,7 @@ iframe {
 }
 @media only screen and (max-width: 900px) {
     .body-container {
-        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery {
+        p, h1, h2, h3, h4, ul, ol, blockquote, .gallery, pre {
             width: $mobile-width;
         }
     }
