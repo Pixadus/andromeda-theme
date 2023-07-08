@@ -21,7 +21,7 @@
             {% block content %}
             <div class="posts">
                 {% for page in section.pages %}
-                <a class="stretched" href="{{page.path}}">
+                <a class="stretched" href="{{config.base_url}}/{{page.path}}">
                     <div class="post-container">
                         <img data-src="{{page.extra.header_img}}" class="lozad" data-placeholder-background="darkgrey">
                         <div class="post-text">
