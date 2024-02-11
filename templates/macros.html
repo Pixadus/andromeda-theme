@@ -20,6 +20,12 @@
 {% macro indexfooter() %}
 <script type="text/javascript" src="{{ config.base_url ~ "/js/galaxy.js" }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+{% endmacro indexfooter %}
+
+
+{% macro footer() %}
+<script type="text/javascript" src="{{ config.base_url ~ "/js/galaxy.js" }}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script>
   const observer = lozad();
   observer.observe();
@@ -39,7 +45,7 @@
     </div>
   </div>
 </footer>
-{% endmacro indexfooter %}
+{% endmacro footer %}
 
 {% macro pagefooter() %}
 <div class="footer-black">
